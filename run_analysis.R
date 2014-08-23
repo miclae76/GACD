@@ -56,8 +56,6 @@ merge.df <- cbind(activity.df, subject.df, variables.df)
 #Melt and reshape to return average of each variable for each activity and each subject.
 ncol <- ncol(merge.df)
 tidy.df <- melt(merge.df, id=c("activity", "subject"), measure.vars=colnames(merge.df[3:ncol]))
-
-#Reshape into tidy data frame by mean using the reshape2 package
 tidy.df <- dcast(tidy.df, activity + subject ~ variable, mean)
 
 #Reorder by Subject then Activity

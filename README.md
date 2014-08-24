@@ -24,7 +24,7 @@ Script Data Manipulations
 <i>Pre-requisites: 
 The UCI HAR Dataset must be extracted in a repo directory called "UCI HAR Dataset".<i>
 
-The <b>run_analysis.R</b> sript do:
+The <b>run_analysis.R</b> sript will do:
 - read in and combines test and training data for subjects, features and activities
 - keep data for only the variables related to  measurement of mean or standard deviation
 - merge subject, features and activity data into one data frame

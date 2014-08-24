@@ -7,45 +7,61 @@ http://archive.ics.uci.edu/ml/machine-learning-databases/00240/
 
 This data set extracted only the data related to mean or standard deviation measurements and compute the mean of those measurements by activity and subject. 
 
-This data set contains 180 records of 68 variables.
+This tidy data set contains 180 records of 68 variables.
 
 Dimension fields (Col 1:2)
 --------------------------
-Dimension fiels are variables against which the mean of the features values was summarized.
-- subject : unique identifier of the participant, type = integer, value range = 1:30
-
+Dimension fields are variables against which the mean of the features values was summarized.
 - activity : activity perform during measurement, type factor w/6 levels (WALKING, WALKING_UPSTAIRS,  WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
-
+- subject : unique identifier of the participant, type = integer, value range = 1:30
 
 Measurement fields (Col 3:68)
 -----------------------------
-All triaxial accelerator and gyroscope measurements.
+All triaxial accelerator and gyroscope measurements (X,Y,Z).
 Fields are numeric values, 15 decimals, normalized and bounded within [-1,1].
 
 <b>Body and gravity linear acceleration</b> (using low pass Butterworth filter)
-- tBodyAcc-XYZ 
-- tGravityAcc-XYZ
+- tBodyAcc-mean()-XYZ 
+- tBodyAcc-std()-XYZ 
+- tGravityAcc-mean()-XYZ
+- tGravityAcc-std()-XYZ
 
 <b>Angular velocity</b>
-- tBodyGyro-XYZ
+- tBodyGyro-mean()-XYZ
+- tBodyGyro-std()-XYZ
 
 <b>Jerk Signals</b> (is linear signals derived in time)
-- tBodyAccJerk-XYZ
-- tBodyGyroJerk-XYZ
+- tBodyAccJerk-mean()-XYZ
+- tBodyAccJerk-std()-XYZ
+- tBodyGyroJerk-mean()-XYZ
+- tBodyGyroJerk-std()-XYZ
+
 
 <b>Signals magnitude</b>  (calculated using the Euclidean norm)
-- tBodyAccMag
-- tGravityAccMag
-- tBodyGyroMag
-- tBodyAccJerkMag
-- tBodyGyroJerkMag
+- tBodyAccMag-mean()
+- tBodyAccMag-std()
+- tGravityAccMag-mean()
+- tGravityAccMag-std()
+- tBodyGyroMag-mean()
+- tBodyGyroMag-std()
+- tBodyAccJerkMag-mean()
+- tBodyAccJerkMag-std()
+- tBodyGyroJerkMag-mean()
+- tBodyGyroJerkMag-std()
 
 <b>Frequency domain signals</b>  (produced by Fast Fourier Transformation)
-- fBodyAcc-XYZ
-- fBodyAccJerk-XYZ
-- fBodyGyro-XYZ
-- fBodyAccMag
-- fBodyAccJerkMag
-- fBodyGyroMag
-- fBodyGyroJerkMag
+- fBodyAcc-mean()-XYZ
+- fBodyAccJerk-mean()-XYZ
+- fBodyGyro-mean()-XYZ
+- fBodyAcc-std()-XYZ
+- fBodyAccJerk-std()-XYZ
+- fBodyGyro-std()-XYZ
+- fBodyAccMag-mean()
+- fBodyAccMag-std()
+- fBodyBodyAccJerkMag-mean()
+- fBodyBodyAccJerkMag-std()
+- fBodyBodyGyroMag-mean()
+- fBodyBodyGyroMag-std()
+- fBodyBodyGyroJerkMag-mean()
+- fBodyBodyGyroJerkMag-std()
 

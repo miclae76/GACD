@@ -17,9 +17,9 @@ Dimension fields are variables against which the mean of the features values was
 
 Measurement fields (Col 3:68)
 -----------------------------
-All triaxial accelerator and gyroscope measurements (X,Y,Z). 
+Based on triaxial accelerator and gyroscope measurements (X,Y,Z).
 Accelaration(Acc) is given in standard gravity units 'g', Gyroscope angular velocity(Gyro) units is radian/second.
-Each Fields is numeric value, 15 decimals, normalized and bounded within [-1,1] and then represented the mean of the time or frequency domain variables. (t denote for time, f for frequency)
+Each Fields is numeric value, 15 decimals, normalized and bounded within [-1,1] and then represented the average of the mean() or std() raw time or frequency domain variables. (t denote for time, f for frequency)
 
 <b>Body and gravity linear acceleration</b> (using low pass Butterworth filter)
 - tBodyAcc-mean()-XYZ 

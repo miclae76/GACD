@@ -15,7 +15,7 @@ The data set contains 10299 instances partitioned into train and test data. It i
 1. <b>activity_labels.txt</b> : mapping table for activities (ID, Label)
 2. <b>features.txt</b> :  variables names 
 3. <b>subject_test.txt</b> and <b>subject_train.txt</b> : identifier of the subject who carried out the experiment.
-4. <b>X_test.txt</b> and <b>X_train.txt</b> : 561 variables storing measurement of triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration and triaxial Angular velocity from the gyroscope. Axis can be identified a last character of the variable name
+4. <b>X_test.txt</b> and <b>X_train.txt</b> : 561 variables storing measurement of triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration and triaxial Angular velocity from the gyroscope. Axis is identified in the last character of the variable name as X, Y or Z.
 5. <b>y_test.txt</b> and <b>y_train.txt</b> : identifier of the activity performed.
 
 
@@ -26,8 +26,11 @@ The UCI HAR Dataset must be extracted in a repo directory called "UCI HAR Datase
 
 The <b>run_analysis.R</b> sript do:
 - read in and combines test and training data for subjects, features and activities
-- keep data for only the varibels related to  measurement of mean or standard deviation
+- keep data for only the variables related to  measurement of mean or standard deviation
 - merge subject, features and activity data
 - reshape data to present the means of all the columns per test subject and per activity and export the new tidy data set into a text file <b>tidy_data.txt</b> also available in the repo.
 
 
+Codebook
+--------
+The file <b>CodeBook.md</b> contains the description of the tidy data set variables.

@@ -19,7 +19,7 @@ The data set contains 10299 instances partitioned into train and test data. It i
 5. <b>y_test.txt</b> and <b>y_train.txt</b> : identifier of the activity performed.
 
 
-Data Manipulations
+Script Data Manipulations
 --------------------------------------
 <i>Pre-requisites: 
 The UCI HAR Dataset must be extracted in a repo directory called "UCI HAR Dataset".<i>

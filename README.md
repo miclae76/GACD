@@ -22,8 +22,9 @@ The data set contains 10299 instances partitioned into train and test data. It i
 Data Manipulations
 --------------------------------------
 <i>Pre-requisites: 
-the UCI HAR Dataset must be extracted in a repo directory called "UCI HAR Dataset"<i>
-The run_analysis.R sript do:
+The UCI HAR Dataset must be extracted in a repo directory called "UCI HAR Dataset".<i>
+
+The <b>run_analysis.R</b> sript do:
 - read in and combines test and training data for subjects, features and activities
 - keep data for only the varibels related to  measurement of mean or standard deviation
 - merge subject, features and activity data

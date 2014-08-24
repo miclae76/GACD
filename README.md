@@ -10,7 +10,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 Data Set Files Description
 --------------------------
-The data set contains 10299 instances partitioned into train and test data. It is organized into several files:
+The raw data set contains 10299 instances partitioned into train and test data. It is organized into several files:
 
 1. <b>activity_labels.txt</b> : mapping table for activities (ID, Label)
 2. <b>features.txt</b> :  variables names 
@@ -30,7 +30,4 @@ The <b>run_analysis.R</b> sript do:
 - merge subject, features and activity data into one data frame
 - reshape data to present the means of all the columns per test subject and per activity and export the new tidy data set into a text file <b>tidy_data.txt</b> also available in the repo.
 
-
-Codebook
---------
-The file <b>CodeBook.md</b> contains the description of the tidy data set variables.
+The resulting tidy data set contains 68 variables which are described in <b>Codebook.md</b>.

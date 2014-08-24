@@ -5,7 +5,7 @@ About
 This tidy data set is based on the orignal raw data set which can be downloaded here:
 http://archive.ics.uci.edu/ml/machine-learning-databases/00240/
 
-This data set extracted only the data related to mean or standard deviation measurements anc compute the mean of those measurements by activity and subject. 
+This data set extracted only the data related to mean or standard deviation measurements and compute the mean of those measurements by activity and subject. 
 
 This data set contains 180 records of 68 variables.
 
@@ -22,11 +22,11 @@ Measurement fields (Col 3:68)
 All triaxial accelerator and gyroscope measurements.
 Fields are numeric values, 15 decimals, normalized and bounded within [-1,1].
 
-<b>Body and gravity linear acceleration</b> (t prefix is for time)
+<b>Body and gravity linear acceleration</b> (using low pass Butterworth filter)
 - tBodyAcc-XYZ 
 - tGravityAcc-XYZ
 
-<b>Angular velocity
+<b>Angular velocity</b>
 - tBodyGyro-XYZ
 
 <b>Jerk Signals</b> (is linear signals derived in time)

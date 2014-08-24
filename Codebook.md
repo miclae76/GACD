@@ -13,12 +13,13 @@ Dimension fields (Col 1:2)
 --------------------------
 Dimension fields are variables against which the mean of the features values was summarized.
 - activity : activity perform during measurement, type factor w/6 levels (WALKING, WALKING_UPSTAIRS,  WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
-- subject : unique identifier of the participant, type = integer, value range = 1:30
+- subject : unique identifier of the participant, type = integer, value range from 1 to 30
 
 Measurement fields (Col 3:68)
 -----------------------------
-All triaxial accelerator and gyroscope measurements (X,Y,Z).
-Fields are numeric values, 15 decimals, normalized and bounded within [-1,1].
+All triaxial accelerator and gyroscope measurements (X,Y,Z). 
+Accelaration(Acc) is given in standard gravity units 'g', Gyroscope angular velocity(Gyro) units is radian/second.
+Each Fields is numeric value, 15 decimals, normalized and bounded within [-1,1] and then represented the mean of the time or frequency domain variables. (t denote for time, f for frequency)
 
 <b>Body and gravity linear acceleration</b> (using low pass Butterworth filter)
 - tBodyAcc-mean()-XYZ 

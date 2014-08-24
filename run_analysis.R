@@ -58,11 +58,11 @@ ncol <- ncol(merge.df)
 tidy.df <- melt(merge.df, id=c("activity", "subject"), measure.vars=colnames(merge.df[3:ncol]))
 tidy.df <- dcast(tidy.df, activity + subject ~ variable, mean)
 
-#Reorder by Subject then Activity
+#Reorder by Activity / Subject
 tidy.df <- tidy.df[order(tidy.df$activity, tidy.df$subject),]
 
 
-#Store tidy data set
+#Store tidy data set in text file tab separated
 write.table(tidy.df, file="tidy_data.txt", row.name=FALSE, sep = "\t", append=FALSE)
 
 #That's all folks !

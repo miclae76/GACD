@@ -22,7 +22,7 @@ The raw data set contains 10299 instances partitioned into train and test data. 
 Script Data Manipulations
 --------------------------------------
 <i>Pre-requisites: 
-The UCI HAR Dataset must be extracted in a repo directory called "UCI HAR Dataset".<i>
+The UCI HAR Dataset must be extracted in the repo subdirectory called "UCI_HAR_Dataset".<i>
 
 The <b>run_analysis.R</b> sript will do:
 - read in and combines test and training data for subjects, features and activities

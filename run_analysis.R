@@ -1,6 +1,5 @@
 # Getting and Cleaning Data Course Project
 
-
 # Assignment Description 
 #-----------------------
 #1.Merges the training and the test sets to create one data set.
@@ -39,7 +38,6 @@ activity.df <- join(activity.df, activity_labels, by="activity_ID", type="left")
 #don't need ID anymore
 activity.df$activity_ID <- NULL
 
-
 #Process variables
 variables.df <- readMerge("X", dPath)
 
@@ -48,7 +46,6 @@ features <- read.table(paste0(dPath, "./features.txt"), col.names=c("ID", "label
 colnames(variables.df) <- features$label
 pattern<-"mean\\(\\)|std\\(\\)"
 variables.df = variables.df[,grep(pattern , names(variables.df), value=TRUE)]
-
 
 #Final Merge, Activity and subject placed as two firs columns
 merge.df <- cbind(activity.df, subject.df, variables.df)
@@ -60,7 +57,6 @@ tidy.df <- dcast(tidy.df, activity + subject ~ variable, mean)
 
 #Reorder by Activity / Subject
 tidy.df <- tidy.df[order(tidy.df$activity, tidy.df$subject),]
-
 
 #Store tidy data set in text file tab separated
 write.table(tidy.df, file="tidy_data.txt", row.name=FALSE, sep = "\t", append=FALSE)

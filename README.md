@@ -1,46 +1,32 @@
 Getting and Cleaning Data - Course Project
 ==========================================
+Human Activity Recognition Using Smartphones
+
+Data Set General Information
+-----------------------------
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. Additional info available here :
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+Data Set Files Description
+--------------------------
+The data set contains 10299 instances partitioned into train and test data. It is organized into several files:
+
+1. <b>activity_labels.txt</b> : mapping table for activities (ID, Label)
+2. <b>features.txt</b> :  variables names 
+3. <b>subject_test.txt</b> and <b>subject_train.txt</b> : identifier of the subject who carried out the experiment.
+4. <b>X_test.txt</b> and <b>X_train.txt</b> : 561 variables storing measurement of triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration and triaxial Angular velocity from the gyroscope. Axis can be identified a last character of the variable name
+5. <b>y_test.txt</b> and <b>y_train.txt</b> : identifier of the activity performed.
 
 
-
-Raw Data Set Information:
----------------------
-
-The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
-
-The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. 
-
-
-Othe
-
-- Data Set Characteristics:   Multivariate, Time-Series
-- Number of Instances:        10299
-- Area:                       Computer
-- Attribute Characteristics:  N/A
-- Number of Attributes:       561
-- Date Donated :              2012-12-10
-- Associated Tasks:           Classification, Clustering
-- Missing Values?             N/A
+Data Manipulations
+--------------------------------------
+<i>Pre-requisites: 
+the UCI HAR Dataset must be extracted in a repo directory called "UCI HAR Dataset"<i>
+The run_analysis.R sript do:
+- read in and combines test and training data for subjects, features and activities
+- keep data for only the varibels related to  measurement of mean or standard deviation
+- merge subject, features and activity data
+- reshape data to present the means of all the columns per test subject and per activity and export the new tidy data set into a text file <b>tidy_data.txt</b> also available in the repo.
 
 
-Attribute Information:
-----------------------
-
-For each record in the dataset it is provided: 
-- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. 
-- Triaxial Angular velocity from the gyroscope. 
-- A 561-feature vector with time and frequency domain variables. 
-- Its activity label. 
-- An identifier of the subject who carried out the experiment.
-
-1. activity_labels.txt
-2. features.txt
-3. subject_test.txt
-4. subject_train.txt
-5. X_test.txt
-6. X_train.txt
-7. y_test.txt
-8. y_train.txt
-
-How to run the script
----------------------
